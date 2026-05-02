@@ -50,9 +50,9 @@ export function BarChart12({ values }: Props) {
             }}
           />
           <Legend wrapperStyle={{ fontSize: 12 }} />
-          <Bar dataKey="Trái" fill={CHART_COLORS.left} radius={[4, 4, 0, 0]} />
-          <Bar dataKey="Phải" fill={CHART_COLORS.right} radius={[4, 4, 0, 0]} />
-          <Bar dataKey="TB" fill={CHART_COLORS.mean} radius={[4, 4, 0, 0]} />
+          <Bar isAnimationActive={false} dataKey="Trái" fill={CHART_COLORS.left} radius={[4, 4, 0, 0]} />
+          <Bar isAnimationActive={false} dataKey="Phải" fill={CHART_COLORS.right} radius={[4, 4, 0, 0]} />
+          <Bar isAnimationActive={false} dataKey="TB" fill={CHART_COLORS.mean} radius={[4, 4, 0, 0]} />
         </BarChart>
       </ResponsiveContainer>
     </div>

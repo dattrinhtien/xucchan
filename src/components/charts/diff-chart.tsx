@@ -48,7 +48,7 @@ export function DiffChart({ values }: Props) {
             }}
             formatter={(value) => [`${Number(value).toFixed(2)}°C`, 'Chênh lệch']}
           />
-          <Bar dataKey="Chênh T-P" radius={[4, 4, 0, 0]}>
+          <Bar isAnimationActive={false} dataKey="Chênh T-P" radius={[4, 4, 0, 0]}>
             {data.map((entry, index) => (
               <Cell
                 key={`cell-${index}`}

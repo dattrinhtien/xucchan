@@ -52,7 +52,7 @@ export function ThresholdChart({ values }: Props) {
             }}
           />
           <Legend wrapperStyle={{ fontSize: 12 }} />
-          <Bar dataKey="TB" fill={CHART_COLORS.mean} radius={[4, 4, 0, 0]} barSize={20} />
+          <Bar isAnimationActive={false} dataKey="TB" fill={CHART_COLORS.mean} radius={[4, 4, 0, 0]} barSize={20} />
           <Line
             dataKey="Ngưỡng trên"
             stroke={CHART_COLORS.upperThreshold}

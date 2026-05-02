@@ -48,7 +48,7 @@ export function SummaryChart({ handCenter, footCenter, diff }: Props) {
             }}
             formatter={(value) => [`${Number(value).toFixed(2)}°C`, 'Tâm nhóm']}
           />
-          <Bar dataKey="value" radius={[6, 6, 0, 0]} barSize={60}>
+          <Bar isAnimationActive={false} dataKey="value" radius={[6, 6, 0, 0]} barSize={60}>
           </Bar>
         </BarChart>
       </ResponsiveContainer>

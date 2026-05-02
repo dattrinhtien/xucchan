@@ -66,9 +66,18 @@ export function ResultContent({ session, values }: Props) {
 
       if (!reportRef.current) return;
 
+      const width = reportRef.current.scrollWidth;
+      const height = reportRef.current.scrollHeight;
+
       const canvas = await toCanvas(reportRef.current, {
         pixelRatio: 2,
         backgroundColor: '#13111C',
+        width: width,
+        height: height,
+        style: {
+          width: `${width}px`,
+          height: `${height}px`,
+        }
       });
 
       const imgData = canvas.toDataURL('image/png');
