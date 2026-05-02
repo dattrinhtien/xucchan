@@ -61,15 +61,14 @@ export function ResultContent({ session, values }: Props) {
 
   const handleExportPDF = async () => {
     try {
-      const html2canvas = (await import('html2canvas')).default;
+      const { toCanvas } = await import('html-to-image');
       const jsPDF = (await import('jspdf')).default;
 
       if (!reportRef.current) return;
 
-      const canvas = await html2canvas(reportRef.current, {
-        scale: 2,
+      const canvas = await toCanvas(reportRef.current, {
+        pixelRatio: 2,
         backgroundColor: '#13111C',
-        useCORS: true,
       });
 
       const imgData = canvas.toDataURL('image/png');
